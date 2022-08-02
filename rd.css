@@ -1,0 +1,66 @@
+@media(max-width:1024px){
+html{
+	font-size: 50%; 
+}
+body{
+	overflow-x: hidden;
+}
+#nav{
+	display: none;
+}
+.hb{
+	display: block;
+}
+main{
+	margin-top: 5rem;
+	background-size: 60%;
+}
+#about, #news{
+	margin: 15.6rem 0 0 0;
+}
+#film_roll img{
+	display: block;
+	height: 70vh;
+}
+#access{
+	margin:15.6rem 0 15.6rem 0;
+}
+#footer-inner{
+	margin: 0 35% 4rem 35%;
+}
+
+
+}
+
+
+@media(max-width: 768px){
+html{
+	font-size: 40%; 
+}
+.curry{
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	box-orient: vertical;
+}
+#text-1{
+	-webkit-box-ordinal-group: 2;
+	-moz-box-ordinal-group: 2;
+	box-ordinal-group: 2;
+}
+#photo-1{
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	box-ordinal-group: 1;
+}
+
+.text{
+	width: 100%;
+}
+.photo{
+	width: 100%;
+}
+
+}
