@@ -392,6 +392,9 @@ footer img[src="logo.png"]{
 #company{
 	text-align:left ;
 }
+#company p{
+	font-size: 1.2vw;
+}
 small{
 	width: 100%;
 	display: block;
