@@ -37,6 +37,8 @@ html{
 #intro h1{
 	font-size: 3rem;
 	font-weight: bold;
+	line-height: 3rem;
+
 }
 .curry{
 	display: -webkit-box;
