@@ -300,7 +300,9 @@ img[src="date.png"]{
 	background-color: #fff;
 	margin: 15.6rem 10% 0 10%;
 }
-
+.about dd{
+	width: 80%;
+}
 dt{
 	font-weight: bold;
 	width: 15vw;
