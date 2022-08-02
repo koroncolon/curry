@@ -353,6 +353,7 @@ dt{
 dd{
 	position: relative;
 	left: 5rem;
+	padding-right:5rem;
 }
 .news a:hover{
 	opacity: 0.7;
