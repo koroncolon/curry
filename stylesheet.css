@@ -1,0 +1,406 @@
+@charset "utf-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+
+
+
+/* ========================================
+    全体設定
+========================================= */
+html{
+	font-size: 62.5%; /* =10px */
+	scroll-behavior: smooth;
+}
+
+
+body {
+	background-color: #ffc000;
+	color:#593306;
+	font-size: 1.6rem;
+	font-family: "小塚ゴシックPro", "Meiryo", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color:#593306;
+	text-decoration:none;
+}
+
+
+*{
+  box-sizing:border-box;
+}
+
+.box{
+	margin-top: 15.6rem;
+	padding: 3em;
+
+}
+
+h2{
+	font-family: "GN-こはるいろサンレイ","Meiryo", sans-serif;
+	font-size: 6rem;
+	text-align: center;
+	padding-bottom:1em;
+}
+/* ========================================
+    ナビゲーション
+========================================= */
+nav{
+	display: flex;
+}
+nav a{
+	font-size: 2.4rem;
+	font-family: "ニコカ", "Meiryo", sans-serif;
+	padding: 0.3em;
+	border: 0.2rem solid #593306;
+	width: 25%;
+	text-align: center;
+}
+nav a:hover{
+	background-color:#593306 ;
+	color: #fff;
+}
+
+
+/* ========================================
+    ハンバーガーメニュー
+========================================= */
+
+.hb{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-top: 1rem;
+	padding-right: 1rem;
+	overflow: hidden;
+}
+.hb-icon{
+	display: flex;
+ 	align-items: center;
+	width: 3.2rem;
+	height: 3.2rem;
+	cursor: pointer;
+	z-index: 10;
+	position: absolute;
+	right: 1rem;
+}
+.hb-line{
+	display: block;
+	width: 100%;
+	height: 0.4rem;
+	border-radius: 4px;
+	background-color: #593306;
+	position: relative;
+	transition: all 0.5s;
+}
+.hb-line::before,
+.hb-line::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height:0.4rem; 
+  border-radius: 4px;
+  background-color: #593306;
+  position: absolute;
+  transition: all 0.5s;
+}
+.hb-line::before{
+  transform: translateY(-1rem);
+}
+.hb-line::after{
+  transform: translateY(1rem);
+}
+
+.hb-icon.open .hb-line{
+  background-color: transparent;
+}
+.hb-icon.open .hb-line::before{
+  transform: rotate(45deg);
+}
+.hb-icon.open .hb-line::after{
+  transform: rotate(-45deg);
+}
+
+.hb-nav{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 4rem;
+	right: -200rem;
+	transition: right 0.5s;	
+	padding-top: 5rem;
+  	background-color: rgba(255,192,0,0.8);
+} 
+.hb-nav.open{
+  right: 0;
+}
+
+.hb-nav ul{
+	width: 100%;
+	text-align: center;
+}
+.hb-nav li{
+	margin-bottom: 3rem;
+}
+.hb-nav a{
+	border: none;
+}
+.hb-nav a:hover{
+	background-color:transparent ;
+	color: #593306;
+	border-bottom: 0.1rem solid #593306;
+}
+
+/* ========================================
+    トップボタン
+========================================= */
+
+.scroll-prevent {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+
+#page_top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-weight: bold;
+  padding: 0.7em;
+  text-align: center;
+  transition: 0.3s;
+}
+#page_top img{
+	width: 5vw;
+	height: 5vw;
+}
+
+/* マウスオーバー時 */
+#page_top:hover {
+	opacity: 0.7;
+}
+/* ========================================
+    メイン
+========================================= */
+main{
+	width: 100%;
+	height: auto;
+	background: url(curry1.png) no-repeat right 3.8rem center/120vh;
+	padding: 0.33em;
+}
+img[src="ライン.png"]{
+	width: 100%;
+}
+img[src="logo.png"]{
+	width: 50%;
+	margin-top: 12.4rem;
+	margin-left: 5.8rem;
+	display: block;
+}
+img[src="date.png"]{
+	width: 50%;
+	margin: 12.4rem 0 12.4rem 5.8rem;
+	display: block;
+}
+
+/* ========================================
+    インナー
+========================================= */
+#inner{
+	padding: 0 5%;
+}
+
+/* ========================================
+    紹介部分
+========================================= */
+.curry{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20rem;
+}
+.curry:last-child{
+	margin-bottom: 0;
+}
+#intro h1{
+	font-family: "ニコカ","Meiryo", sans-serif;
+	font-size: 4rem;
+	line-height: 6rem;
+	text-align: center;
+	margin-bottom: 5rem;
+}
+#intro p{
+	font-size: 2rem;
+	text-align: center;
+}
+.text{
+	width: 50%;
+}
+.photo{
+	width: 50%;
+}
+.photo img{
+	width: 100%;
+}
+
+
+/* ========================================
+    イベント概要
+========================================= */
+#about, #news{
+	background-color: #fff;
+	margin: 15.6rem 10% 0 10%;
+}
+table{
+	width: 100%;
+}
+tr{
+	display: flex;
+	border-bottom: 0.1rem solid #b73902;
+	padding: 2rem 0;
+}
+th{
+	font-weight: bold;
+	width: 15rem;
+}
+
+#about p{
+	margin-bottom: 2rem;
+}
+
+
+/* ========================================
+    メニュー
+========================================= */
+
+#film_roll img{
+	display: block;
+	height: 50vh;
+}
+#film_roll p{
+	text-align: center;
+	margin-top: 2rem;
+	font-size: 2rem;
+}
+.linkbtn{
+	text-align: center;
+	margin-top: 5rem;
+}
+.linkbtn a{
+	font-size: 2rem;
+	font-weight: bold;
+	background-color: #fff;
+	border-radius: 0.5rem;
+	padding:0.5em 1em;
+}
+.linkbtn a:hover{
+	background-color: #593306;
+	color: #fff;
+}
+/* ========================================
+    お知らせ
+========================================= */
+.news{
+	display: flex;
+	padding: 1em;
+	border-bottom: 0.1rem solid #b73902;
+}
+.news dt{
+	font-weight: bold;
+}
+.news dd{
+	position: relative;
+	left: 5rem;
+}
+.news a:hover{
+	opacity: 0.7;
+}
+
+#news .linkbtn a{
+	background-color: #ffc000;
+}
+#news .linkbtn a:hover{
+	background-color: #593306;
+}
+
+/* ========================================
+    アクセス
+========================================= */
+#access iframe{
+	width: 100%;
+}
+#access p{
+	margin-top:2rem ;
+}
+#access{
+	margin:15.6rem 6% 15.6rem 6%;
+}
+
+/* ========================================
+   フッター
+========================================= */
+#footer-inner{
+	margin: 0 42% 4rem 42%;
+}
+footer img[src="logo.png"]{
+	width: 100%;
+	margin: 4rem auto;
+}
+#company{
+	text-align:left ;
+}
+small{
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin: 5rem 0 2rem 0;
+}
