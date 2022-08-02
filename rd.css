@@ -63,5 +63,7 @@ html{
 .photo{
 	width: 100%;
 }
-
+#film_roll img{
+	height: 30vh;
+}
 }
