@@ -273,8 +273,8 @@ img[src="date.png"]{
 }
 #intro h1{
 	font-family: "ニコカ","Meiryo", sans-serif;
-	font-size: 3.2vw;
-	line-height: 5vw;
+	font-size: 3.2rem;
+	line-height: 5rem;
 	text-align: center;
 	margin-bottom: 5rem;
 }
@@ -322,7 +322,7 @@ dt{
 
 #film_roll img{
 	display: block;
-	height: 35rem;
+	height: 50vh;
 }
 #film_roll p{
 	text-align: center;
@@ -393,7 +393,7 @@ footer img[src="logo.png"]{
 	text-align:left ;
 }
 #company p{
-	font-size: 1.2vw;
+	font-size: 1.3rem;
 }
 small{
 	width: 100%;
